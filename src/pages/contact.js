@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-function ContactPage() {
+export default function ContactPage() {
   return (
     <Layout>
       <SEO
@@ -76,5 +76,3 @@ function ContactPage() {
     </Layout>
   );
 }
-
-export default ContactPage;

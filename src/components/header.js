@@ -1,7 +1,7 @@
-import { graphql, useStaticQuery, Link } from "gatsby";
 import React, { useState } from "react";
+import { graphql, useStaticQuery, Link } from "gatsby";
 
-function Header() {
+export default function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
   const { site } = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -75,5 +75,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;

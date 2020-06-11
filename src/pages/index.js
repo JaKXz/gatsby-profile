@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import catAndHumanIllustration from "../images/cat-and-human-illustration.svg";
 
-function IndexPage() {
+export default function IndexPage() {
   return (
     <Layout>
       <SEO
@@ -39,5 +39,3 @@ function IndexPage() {
     </Layout>
   );
 }
-
-export default IndexPage;

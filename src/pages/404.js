@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import abductionIllustration from "../images/abduction-illustration.svg";
 
-function NotFoundPage() {
+export default function NotFoundPage() {
   return (
     <Layout>
       <SEO title="404: Not found" />
@@ -21,5 +21,3 @@ function NotFoundPage() {
     </Layout>
   );
 }
-
-export default NotFoundPage;
