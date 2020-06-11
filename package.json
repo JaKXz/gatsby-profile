@@ -4,9 +4,9 @@
   "version": "4.0.0",
   "author": "Taylor Bryant <taylor@bryant.io>",
   "dependencies": {
-    "gatsby": "2.23.1",
+    "gatsby": "2.23.3",
     "gatsby-plugin-manifest": "2.4.11",
-    "gatsby-plugin-offline": "3.2.8",
+    "gatsby-plugin-offline": "3.2.9",
     "gatsby-plugin-postcss": "2.3.4",
     "gatsby-plugin-react-helmet": "3.3.4",
     "gatsby-plugin-sharp": "2.6.11",
@@ -23,32 +23,31 @@
   ],
   "license": "MIT",
   "scripts": {
-    "analyze:lint": "eslint --ext .jsx --ext .js .",
-    "analyze:prettier": "prettier --list-different \"**/*.{css,js,jsx,json,md}\"",
-    "analyze": "npm run analyze:lint && npm run analyze:prettier",
-    "fix:lint": "eslint --ext .jsx --ext .js . --fix",
-    "fix:prettier": "prettier --write \"**/*.{css,js,jsx,json,md}\"",
-    "fix": "npm run fix:lint && npm run fix:prettier",
+    "lint": "eslint --ext .jsx --ext .js .",
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "dev": "npm run develop",
-    "start": "npm run develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "devDependencies": {
     "@tailwindcss/custom-forms": "0.2.1",
     "autoprefixer": "9.8.0",
     "babel-eslint": "10.1.0",
     "cssnano": "4.1.10",
-    "eslint": "6.8.0",
-    "eslint-loader": "3.0.4",
+    "eslint": "7.2.0",
+    "eslint-loader": "4.0.2",
     "eslint-plugin-import": "2.21.2",
     "eslint-plugin-react": "7.20.0",
     "gatsby-plugin-eslint": "2.0.8",
+    "husky": "^4.2.5",
     "prettier": "2.0.5",
+    "pretty-quick": "^2.0.1",
     "tailwindcss": "1.4.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "repository": {
     "type": "git",
