@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Jason Kurian <jgkurian@me.com>",
   "dependencies": {
+    "classnames": "^2.2.6",
     "gatsby": "2.23.3",
     "gatsby-plugin-manifest": "2.4.11",
     "gatsby-plugin-offline": "3.2.9",
