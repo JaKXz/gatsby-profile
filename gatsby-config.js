@@ -38,10 +38,9 @@ module.exports = {
         postCssPlugins: [
           require(`tailwindcss`)(tailwindConfig),
           require(`autoprefixer`),
-          ...(process.env.NODE_ENV === `production`
-            ? [require(`cssnano`)]
-            : []),
-        ],
+        ].concat(
+          process.env.NODE_ENV === `production` ? require(`cssnano`) : [],
+        ),
       },
     },
     `gatsby-plugin-offline`,
