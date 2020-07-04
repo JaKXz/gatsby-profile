@@ -1,5 +1,5 @@
 import React from "react";
-
+import cx from "classnames";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import abductionIllustration from "../images/abduction-illustration.svg";
@@ -11,11 +11,20 @@ export default function NotFoundPage() {
       <div>
         <img
           alt="Ghost getting abducted by aliens"
-          className="block mx-auto w-1/2"
+          className={cx("block", "mx-auto", "w-1/2")}
           src={abductionIllustration}
         />
-        <h2 className="bg-yellow-400 text-2xl font-bold inline-block my-8 p-3">
-          Looks like this page is a ghost that got abducted by aliens...
+        <h2
+          className={cx(
+            "bg-yellow-400",
+            "text-2xl",
+            "font-bold",
+            "inline-block",
+            "my-8",
+            "p-3",
+          )}
+        >
+          Looks like this page got abducted by aliens...
         </h2>
       </div>
     </Layout>

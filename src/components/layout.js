@@ -1,39 +1,58 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import cx from "classnames";
 import Header from "./header";
+import Anchor from "./anchor";
 
 export default function Layout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900">
+    <div
+      className={cx(
+        "flex",
+        "flex-col",
+        "min-h-screen",
+        "font-sans",
+        "text-gray-900",
+      )}
+    >
       <Header />
 
-      <main className="flex flex-1 w-full max-w-4xl px-4 py-8 mx-auto md:px-8 md:py-16">
+      <main
+        className={cx(
+          "flex",
+          "flex-1",
+          "w-full",
+          "max-w-4xl",
+          "px-4",
+          "py-8",
+          "mx-auto",
+          "md:px-8",
+          "md:py-16",
+        )}
+      >
         {children}
       </main>
 
-      <footer className="bg-blue-700">
-        <nav className="flex justify-between max-w-4xl p-4 mx-auto text-sm md:p-8">
-          <p className="text-white">
-            <a
-              className="font-bold no-underline"
-              href="https://jakxz.github.io"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Jason Kurian
-            </a>
-          </p>
-
+      <footer className={cx("bg-blue-700")}>
+        <nav
+          className={cx(
+            "flex",
+            "flex-row-reverse",
+            "justify-between",
+            "max-w-4xl",
+            "p-4",
+            "mx-auto",
+            "text-sm",
+            "md:p-8",
+          )}
+        >
           <p>
-            <a
-              className="font-bold text-white no-underline"
+            <Anchor
+              className={cx("font-bold", "text-white", "no-underline")}
               href="https://github.com/jakxz/jakxz.github.io"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               GitHub
-            </a>
+            </Anchor>
           </p>
         </nav>
       </footer>

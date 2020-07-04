@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
+import cx from "classnames";
 
 export default function Header() {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -15,26 +16,41 @@ export default function Header() {
 
   return (
     <header className="bg-teal-700">
-      <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:p-8">
+      <div
+        className={cx(
+          "flex",
+          "flex-wrap",
+          "items-center",
+          "justify-between",
+          "max-w-4xl",
+          "p-4",
+          "mx-auto",
+          "md:p-8",
+        )}
+      >
         <Link to="/">
-          <h1 className="flex items-center text-white no-underline">
-            <svg
-              className="w-8 h-8 mr-2 fill-current"
-              height="54"
-              viewBox="0 0 54 54"
-              width="54"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z" />
-            </svg>
-            <span className="text-xl font-bold tracking-tight">
+          <h1
+            className={cx("flex", "items-center", "text-white", "no-underline")}
+          >
+            <span className={cx("text-xl", "font-bold", "tracking-tight")}>
               {site.siteMetadata.title}
             </span>
           </h1>
         </Link>
 
         <button
-          className="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+          className={cx(
+            "flex",
+            "items-center",
+            "block",
+            "px-3",
+            "py-2",
+            "text-white",
+            "border",
+            "border-white",
+            "rounded",
+            "md:hidden",
+          )}
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
@@ -48,27 +64,39 @@ export default function Header() {
         </button>
 
         <nav
-          className={`${
-            isExpanded ? `block` : `hidden`
-          } md:block md:flex md:items-center w-full md:w-auto`}
+          className={cx(
+            { block: isExpanded, hidden: !isExpanded },
+            "md:block",
+            "md:flex",
+            "md:items-center",
+            "w-full",
+            "md:w-auto",
+          )}
         >
           {[
             {
-              route: `/about`,
-              title: `About`,
+              to: `/about`,
+              children: `About`,
             },
             {
-              route: `/contact`,
-              title: `Contact`,
+              to: `/contact`,
+              children: `Contact`,
             },
-          ].map((link) => (
+          ].map((props) => (
             <Link
-              className="block mt-4 text-white no-underline md:inline-block md:mt-0 md:ml-6"
-              key={link.title}
-              to={link.route}
-            >
-              {link.title}
-            </Link>
+              className={cx(
+                "block",
+                "mt-4",
+                "text-white",
+                "no-underline",
+                "md:inline-block",
+                "md:mt-0",
+                "md:ml-6",
+              )}
+              // eslint-disable-next-line react/prop-types
+              key={props.children}
+              {...props}
+            />
           ))}
         </nav>
       </div>
