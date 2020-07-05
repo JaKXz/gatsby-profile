@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
-import Header from "./header";
 import Anchor from "./anchor";
 
 export default function Layout({ children }) {
@@ -15,8 +14,6 @@ export default function Layout({ children }) {
         "text-gray-900",
       )}
     >
-      <Header />
-
       <main
         className={cx(
           "flex",
@@ -33,7 +30,7 @@ export default function Layout({ children }) {
         {children}
       </main>
 
-      <footer className={cx("bg-blue-700")}>
+      <footer>
         <nav
           className={cx(
             "flex",
@@ -46,14 +43,12 @@ export default function Layout({ children }) {
             "md:p-8",
           )}
         >
-          <p>
-            <Anchor
-              className={cx("font-bold", "text-white", "no-underline")}
-              href="https://github.com/jakxz/jakxz.github.io"
-            >
-              GitHub
-            </Anchor>
-          </p>
+          <Anchor
+            className={cx("font-bold", "no-underline")}
+            href="https://github.com/jakxz/jakxz.github.io"
+          >
+            GitHub
+          </Anchor>
         </nav>
       </footer>
     </div>
