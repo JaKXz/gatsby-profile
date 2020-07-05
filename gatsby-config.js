@@ -46,6 +46,12 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    { resolve: `gatsby-source-filesystem`, options: { path: `./src/images/` } },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `images`, path: `./src/images/` },
+    },
+    {
+      resolve: `gatsby-background-image-es5`,
+    },
   ],
 };
