@@ -1,9 +1,11 @@
 import React from "react";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import cx from "classnames";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-export default function IndexPage() {
+export default function IndexPage({ data }) {
   return (
     <Layout>
       <SEO title="Home" />
@@ -15,8 +17,19 @@ export default function IndexPage() {
           "flex-grow",
           "justify-center",
           "font-normal",
+          "md:rounded",
+          "md:shadow",
+          "md:border-solid",
+          "md:border-1",
+          "md:border-gray-600",
+          "md:px-24",
         )}
       >
+        <Img
+          className={cx("h-32", "w-32", "rounded-full", "self-center")}
+          fluid={data.file.childImageSharp.fluid}
+          alt="headshot"
+        />
         <p>
           I strive to create great software driven by iterative code design,
           centred around wonderful user experiences. This story is an effective
@@ -59,3 +72,15 @@ export default function IndexPage() {
     </Layout>
   );
 }
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "headshot.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
