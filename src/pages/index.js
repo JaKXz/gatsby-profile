@@ -13,25 +13,47 @@ export default function IndexPage() {
           "flex",
           "flex-col",
           "flex-grow",
-          "text-center",
           "justify-center",
+          "font-normal",
         )}
       >
-        <h1
-          className={cx(
-            "inline-block",
-            "p-3",
-            "mb-4",
-            "text-3xl",
-            "font-bold",
-            "bg-yellow-400",
-          )}
-        >
-          Hey there! Thanks for stopping by.
-        </h1>
-
-        <p className={cx("leading-loose")}>
-          Here&apos;s some stuff you can check out:
+        <p>
+          I strive to create great software driven by iterative code design,
+          centred around wonderful user experiences. This story is an effective
+          philosophical metaphor for how I feel about writing code and building
+          products.
+          <br />
+          <br />
+          <blockquote
+            className={cx(
+              "pl-4",
+              "font-serif",
+              "leading-loose",
+              "text-justify",
+              "border-l-4",
+              "border-gray-900",
+            )}
+          >
+            "Everyone must leave something behind when he dies," my grandfather
+            said. "A child or a book or a painting or a house or a wall built or
+            a pair of shoes made. Or a garden planted. Something your hand
+            touched some way so your soul has somewhere to go when you die, and
+            when people look at that tree or that flower you planted, you’re
+            there. It doesn’t matter what you do, he said, so long as you change
+            something from the way it was before you touched it into something
+            that’s like you after you take your hands away. The difference
+            between the man who just cuts lawns and a real gardener is in the
+            touching", he said.
+            <br />
+            The lawn-cutter might just as well not have been there at all; the
+            gardener will be there a lifetime.
+            <br />
+            <br />
+            <span className={cx("font-semibold")}>
+              Being the lawn cutter is easy... no?
+            </span>
+          </blockquote>
+          <p className={cx("text-right")}> -- Anonymous</p>
         </p>
       </section>
     </Layout>
