@@ -175,15 +175,8 @@ export default function IndexPage({ data }) {
                 {
                   title: "Visit me on Twitter",
                   href: "https://twitter.com/JaKXz92",
-                  children: (
-                    <SVG
-                      className={cx(
-                        "transition-colors",
-                        "ease-in-out",
-                        "duration-300",
-                      )}
-                      viewBox="0 0 1000 1000"
-                    >
+                  Logo: ({ ...props }) => (
+                    <SVG viewBox="0 0 1000 1000" {...props}>
                       <Twitter />
                     </SVG>
                   ),
@@ -191,15 +184,8 @@ export default function IndexPage({ data }) {
                 {
                   title: "Visit me on GitHub",
                   href: "https://github.com/JaKXz",
-                  children: (
-                    <SVG
-                      className={cx(
-                        "transition-colors",
-                        "ease-in-out",
-                        "duration-300",
-                      )}
-                      viewBox="0 0 1000 1000"
-                    >
+                  Logo: ({ ...props }) => (
+                    <SVG viewBox="0 0 1000 1000" {...props}>
                       <GitHub />
                     </SVG>
                   ),
@@ -207,15 +193,8 @@ export default function IndexPage({ data }) {
                 {
                   title: "Visit me on LinkedIn",
                   href: "https://linkedin.com/in/jgkurian",
-                  children: (
-                    <SVG
-                      className={cx(
-                        "transition-colors",
-                        "ease-in-out",
-                        "duration-300",
-                      )}
-                      viewBox="0 0 1000 1000"
-                    >
+                  Logo: ({ ...props }) => (
+                    <SVG viewBox="0 0 1000 1000" {...props}>
                       <LinkedIn />
                     </SVG>
                   ),
@@ -223,15 +202,8 @@ export default function IndexPage({ data }) {
                 {
                   title: "Visit me on AngeList",
                   href: "https://angel.co/jason-kurian",
-                  children: (
-                    <SVG
-                      className={cx(
-                        "transition-colors",
-                        "ease-in-out",
-                        "duration-300",
-                      )}
-                      viewBox="0 0 1000 1000"
-                    >
+                  Logo: ({ ...props }) => (
+                    <SVG viewBox="0 0 1000 1000" {...props}>
                       <AngelList />
                     </SVG>
                   ),
@@ -239,15 +211,8 @@ export default function IndexPage({ data }) {
                 {
                   title: "Visit me on StackOverflow",
                   href: "https://stackoverflow.com/users/1444541/jakxz",
-                  children: (
-                    <SVG
-                      className={cx(
-                        "transition-colors",
-                        "ease-in-out",
-                        "duration-300",
-                      )}
-                      viewBox="0 0 128 128"
-                    >
+                  Logo: ({ ...props }) => (
+                    <SVG viewBox="0 0 128 128" {...props}>
                       <StackOverflow />
                     </SVG>
                   ),
@@ -255,15 +220,8 @@ export default function IndexPage({ data }) {
                 {
                   title: "Visit me on StackExchange",
                   href: "https://stackexchange.com/users/1552454/jakxz",
-                  children: (
-                    <SVG
-                      className={cx(
-                        "transition-colors",
-                        "ease-in-out",
-                        "duration-300",
-                      )}
-                      viewBox="436 436 128 128"
-                    >
+                  Logo: ({ ...props }) => (
+                    <SVG viewBox="436 436 128 128" {...props}>
                       <StackExchange />
                     </SVG>
                   ),
@@ -271,20 +229,13 @@ export default function IndexPage({ data }) {
                 {
                   title: "Visit me on SoundCloud",
                   href: "https://soundcloud.com/jgkurian",
-                  children: (
-                    <SVG
-                      className={cx(
-                        "transition-colors",
-                        "ease-in-out",
-                        "duration-300",
-                      )}
-                      viewBox="0 0 1000 1000"
-                    >
+                  Logo: ({ ...props }) => (
+                    <SVG viewBox="0 0 1000 1000" {...props}>
                       <SoundCloud />
                     </SVG>
                   ),
                 },
-              ].map(({ children, ...props }) => (
+              ].map(({ Logo, ...props }) => (
                 <Anchor
                   className={cx(
                     "w-8",
@@ -295,7 +246,13 @@ export default function IndexPage({ data }) {
                   key={props.href}
                   {...props}
                 >
-                  {children}
+                  <Logo
+                    className={cx(
+                      "transition-colors",
+                      "ease-in-out",
+                      "duration-300",
+                    )}
+                  />
                 </Anchor>
               ))}
             </div>
