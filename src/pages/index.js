@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import BackgroundImg from "gatsby-background-image";
 import cx from "classnames";
+import { isPhone } from "../utils/mobile-detect";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Anchor from "../components/anchor";
@@ -18,7 +19,7 @@ export default function IndexPage({ data }) {
       >
         <Img
           className={cx(
-            "md:hidden",
+            { "md:hidden": !isPhone },
             "rounded-full",
             "h-64",
             "w-64",
@@ -27,7 +28,13 @@ export default function IndexPage({ data }) {
           fluid={data.headshot.childImageSharp.fluid}
           alt="headshot"
         />
-        <div className={cx("md:hidden", "font-semibold", "text-center")}>
+        <div
+          className={cx(
+            { "md:hidden": !isPhone, "md:text-white": isPhone },
+            "font-semibold",
+            "text-center",
+          )}
+        >
           <Title />
         </div>
         <div
@@ -41,7 +48,9 @@ export default function IndexPage({ data }) {
         >
           <BackgroundImg
             style={{ minHeight: "35vh" }}
-            className={cx("before:rounded-t", "hidden", "md:block")}
+            className={cx("before:rounded-t", "rounded-t", "hidden", {
+              "md:block": !isPhone,
+            })}
             fluid={data.headshot.childImageSharp.fluid}
             alt="headshot"
           >
