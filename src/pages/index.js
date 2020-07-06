@@ -91,7 +91,6 @@ export default function IndexPage({ data }) {
               className={cx(
                 "pl-4",
                 "font-serif",
-                "leading-loose",
                 "text-justify",
                 "border-l-4",
                 "border-gray-900",
@@ -118,6 +117,14 @@ export default function IndexPage({ data }) {
               </span>
             </blockquote>
             <p className={cx("text-right")}> -- Anonymous</p>
+            <div className={cx("text-center", "my-4", "leading-loose")}>
+              <h3 className={cx("tracking-widest", "text-gray-500")}>
+                EDUCATION
+              </h3>
+              <p>Knowledge Integration</p>
+              <p>Collaborative Design Specialization</p>
+              <p>University of Waterloo</p>
+            </div>
           </div>
         </div>
       </section>
