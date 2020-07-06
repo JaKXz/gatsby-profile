@@ -7,7 +7,7 @@ import SEO from "../components/seo";
 
 export default function IndexPage({ data }) {
   return (
-    <Layout>
+    <Layout className={cx("md:bg-dark-to-light-blue")}>
       <SEO title="Home" />
 
       <section
@@ -17,7 +17,6 @@ export default function IndexPage({ data }) {
           "flex-grow",
           "justify-center",
           "font-normal",
-          "md:rounded",
           "md:shadow",
           "md:border-solid",
           "md:border-1",
@@ -46,7 +45,16 @@ export default function IndexPage({ data }) {
             </div>
           </div>
         </Img>
-        <div className={cx("pt-4", "sm:p-8", "lg:p-12", "xl:p-16")}>
+        <div
+          className={cx(
+            "pt-4",
+            "sm:p-8",
+            "lg:p-12",
+            "xl:p-16",
+            "bg-white",
+            "md:rounded-b",
+          )}
+        >
           <p>
             I strive to create great software driven by iterative code design,
             centred around wonderful user experiences. This story is an

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 
-export default function Layout({ children }) {
+export default function Layout({ children, className }) {
   return (
     <div
       className={cx(
@@ -11,6 +11,7 @@ export default function Layout({ children }) {
         "min-h-screen",
         "font-sans",
         "text-gray-900",
+        className,
       )}
     >
       <main
