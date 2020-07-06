@@ -21,12 +21,12 @@ module.exports = {
   plugins: [
     require("tailwindcss-plugins/gradients"),
     require("@tailwindcss/custom-forms"),
-    plugin(({ addVariant, e }) => {
-      addVariant("before", ({ modifySelectors, separator }) => {
+    plugin(({ addVariant, e }) =>
+      addVariant("before", ({ modifySelectors, separator }) =>
         modifySelectors(
           ({ className }) => `.${e(`before${separator}${className}`)}:before`,
-        );
-      });
-    }),
+        ),
+      ),
+    ),
   ],
 };

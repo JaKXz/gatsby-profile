@@ -19,7 +19,7 @@ export default function Layout({ children, className }) {
           "flex",
           "flex-1",
           "w-full",
-          "max-w-4xl",
+          "max-w-3xl",
           "px-4",
           "py-8",
           "mx-auto",
