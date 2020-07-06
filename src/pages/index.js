@@ -25,12 +25,12 @@ export default function IndexPage({ data }) {
         )}
       >
         <Img
-          Tag="div"
-          className={cx("h-full", "md:rounded", "min-h-35")}
+          style={{ minHeight: "35vh" }}
+          className={cx("h-full", "before:rounded-t")}
           fluid={data.file.childImageSharp.fluid}
           alt="headshot"
         >
-          <div className={cx("h-full", "flex", "flex-col")}>
+          <div className={cx("h-full", "flex", "flex-col", "pb-2", "md:pb-4")}>
             <div
               className={cx(
                 "mt-auto",
@@ -39,14 +39,14 @@ export default function IndexPage({ data }) {
                 "text-center",
               )}
             >
-              <h2 className={cx("text-2xl")}>JASON KURIAN</h2>
+              <h2 className={cx("text-2xl", "tracking-wider")}>JASON KURIAN</h2>
               <p className={cx("text-xl")}>
                 UX & fullstack developer, lifelong student, and musician
               </p>
             </div>
           </div>
         </Img>
-        <div className={cx("pt-4", "md:p-12", "lg:p-24")}>
+        <div className={cx("pt-4", "sm:p-8", "lg:p-12", "xl:p-16")}>
           <p>
             I strive to create great software driven by iterative code design,
             centred around wonderful user experiences. This story is an
