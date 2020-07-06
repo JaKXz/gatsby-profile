@@ -6,6 +6,7 @@ import cx from "classnames";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Anchor from "../components/anchor";
+import Title from "../components/title";
 
 export default function IndexPage({ data }) {
   return (
@@ -23,9 +24,12 @@ export default function IndexPage({ data }) {
             "w-64",
             "self-center",
           )}
-          fluid={data.file.childImageSharp.fluid}
+          fluid={data.headshot.childImageSharp.fluid}
           alt="headshot"
         />
+        <div className={cx("md:hidden", "font-semibold", "text-center")}>
+          <Title />
+        </div>
         <div
           className={cx(
             "md:rounded",
@@ -38,7 +42,7 @@ export default function IndexPage({ data }) {
           <BackgroundImg
             style={{ minHeight: "35vh" }}
             className={cx("before:rounded-t", "hidden", "md:block")}
-            fluid={data.file.childImageSharp.fluid}
+            fluid={data.headshot.childImageSharp.fluid}
             alt="headshot"
           >
             <div
@@ -60,12 +64,7 @@ export default function IndexPage({ data }) {
                   "text-center",
                 )}
               >
-                <h2 className={cx("text-2xl", "tracking-wider")}>
-                  JASON KURIAN
-                </h2>
-                <p className={cx("text-xl")}>
-                  UX & fullstack developer, lifelong student, and musician
-                </p>
+                <Title />
               </div>
             </div>
           </BackgroundImg>
@@ -233,7 +232,7 @@ export default function IndexPage({ data }) {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "headshot.jpg" }) {
+    headshot: file(relativePath: { eq: "headshot.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
