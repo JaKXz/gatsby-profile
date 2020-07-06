@@ -88,6 +88,10 @@ export default function IndexPage({ data }) {
                   "w-full",
                   "rounded",
                   "bg-blue-700",
+                  "hover:bg-blue-600",
+                  "transition-colors",
+                  "ease-in-out",
+                  "duration-300",
                   "text-white",
                   "text-lg",
                   "flex",
@@ -164,7 +168,12 @@ export default function IndexPage({ data }) {
                   href: "https://twitter.com/JaKXz92",
                   children: (
                     <svg
-                      className={cx("fill-current")}
+                      className={cx(
+                        "fill-current",
+                        "transition-colors",
+                        "ease-in-out",
+                        "duration-300",
+                      )}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 1000 1000"
                     >
@@ -177,7 +186,12 @@ export default function IndexPage({ data }) {
                   href: "https://github.com/JaKXz",
                   children: (
                     <svg
-                      className={cx("fill-current")}
+                      className={cx(
+                        "fill-current",
+                        "transition-colors",
+                        "ease-in-out",
+                        "duration-300",
+                      )}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 1000 1000"
                     >
@@ -189,15 +203,18 @@ export default function IndexPage({ data }) {
                   title: "Visit me on LinkedIn",
                   href: "https://linkedin.com/in/jgkurian",
                   children: (
-                    <span className="SVGInline">
-                      <svg
-                        className={cx("fill-current")}
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 1000 1000"
-                      >
-                        <path d="M1000 500c0 277-223 500-500 500S0 777 0 500 223 0 500 0s500 223 500 500zM375 260c-1-41-32-73-83-73-50 0-83 32-83 73s32 73 82 73h1c51 0 83-32 83-73zm-21 136H229v354h125V396zm458 166c0-114-56-187-146-187-50 0-87 30-104 75l-4-54H434c1 13 3 83 3 83v271h125V562c0-50 23-83 62-83 38 0 63 20 63 83v188h125V562z" />
-                      </svg>
-                    </span>
+                    <svg
+                      className={cx(
+                        "fill-current",
+                        "transition-colors",
+                        "ease-in-out",
+                        "duration-300",
+                      )}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 1000 1000"
+                    >
+                      <path d="M1000 500c0 277-223 500-500 500S0 777 0 500 223 0 500 0s500 223 500 500zM375 260c-1-41-32-73-83-73-50 0-83 32-83 73s32 73 82 73h1c51 0 83-32 83-73zm-21 136H229v354h125V396zm458 166c0-114-56-187-146-187-50 0-87 30-104 75l-4-54H434c1 13 3 83 3 83v271h125V562c0-50 23-83 62-83 38 0 63 20 63 83v188h125V562z" />
+                    </svg>
                   ),
                 },
                 {
@@ -205,7 +222,12 @@ export default function IndexPage({ data }) {
                   href: "https://angel.co/jason-kurian",
                   children: (
                     <svg
-                      className={cx("fill-current")}
+                      className={cx(
+                        "fill-current",
+                        "transition-colors",
+                        "ease-in-out",
+                        "duration-300",
+                      )}
                       viewBox="0 0 1000 1000"
                       xmlns="http://www.w3.org/2000/svg"
                     >
@@ -222,7 +244,12 @@ export default function IndexPage({ data }) {
                   href: "https://stackoverflow.com/users/1444541/jakxz",
                   children: (
                     <svg
-                      className={cx("fill-current")}
+                      className={cx(
+                        "fill-current",
+                        "transition-colors",
+                        "ease-in-out",
+                        "duration-300",
+                      )}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 128 128"
                     >
@@ -235,7 +262,12 @@ export default function IndexPage({ data }) {
                   href: "https://stackexchange.com/users/1552454/jakxz",
                   children: (
                     <svg
-                      className={cx("fill-current")}
+                      className={cx(
+                        "fill-current",
+                        "transition-colors",
+                        "ease-in-out",
+                        "duration-300",
+                      )}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="436 436 128 128"
                     >
@@ -248,7 +280,12 @@ export default function IndexPage({ data }) {
                   href: "https://soundcloud.com/jgkurian",
                   children: (
                     <svg
-                      className={cx("fill-current")}
+                      className={cx(
+                        "fill-current",
+                        "transition-colors",
+                        "ease-in-out",
+                        "duration-300",
+                      )}
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 1000 1000"
                     >
