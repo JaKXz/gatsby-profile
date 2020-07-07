@@ -35,6 +35,7 @@ export default function IndexPage({ data }) {
             "h-64",
             "w-64",
             "self-center",
+            "mb-4",
           )}
           fluid={data.headshot.childImageSharp.fluid}
           alt="headshot"
