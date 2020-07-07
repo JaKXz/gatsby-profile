@@ -92,8 +92,8 @@ export default function IndexPage({ data }) {
             className={cx("sm:pb-8", "md:px-32", "bg-white", "md:rounded-b")}
           >
             <div className={cx("text-center", "bg-white", "py-8")}>
-              <Link
-                to="/resume"
+              <Anchor
+                href="https://www.notion.so/Jason-Kurian-eed765fdda2c42218bd2d1dbb20c535c"
                 className={cx(
                   "py-3",
                   "w-full",
@@ -114,7 +114,7 @@ export default function IndexPage({ data }) {
                   <path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
                 </SVG>
                 View my portfolio
-              </Link>
+              </Anchor>
             </div>
             <p>
               I strive to create software backed by solid architecture and
