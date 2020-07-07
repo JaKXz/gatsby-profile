@@ -1,5 +1,6 @@
 import React from "react";
 import cx from "classnames";
+import PropTypes from "prop-types";
 
 export default function SVG({ className, children, ...props }) {
   return (
@@ -12,3 +13,8 @@ export default function SVG({ className, children, ...props }) {
     </svg>
   );
 }
+
+SVG.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+};

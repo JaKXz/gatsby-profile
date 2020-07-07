@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import cx from "classnames";
 
-export default function Layout({ children, className }) {
+export default function Layout({ children, className, header, footer }) {
   return (
     <div
       className={cx(
@@ -14,6 +14,7 @@ export default function Layout({ children, className }) {
         className,
       )}
     >
+      {header}
       <main
         className={cx(
           "flex",
@@ -27,10 +28,14 @@ export default function Layout({ children, className }) {
       >
         {children}
       </main>
+      {footer}
     </div>
   );
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  header: PropTypes.node,
+  footer: PropTypes.node,
 };
