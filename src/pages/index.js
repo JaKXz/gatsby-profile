@@ -18,6 +18,7 @@ import SEO from "../components/seo";
 import Anchor from "../components/anchor";
 import Title from "../components/title";
 import SVG from "../components/svg";
+import Quote from "../components/quote";
 
 export default function IndexPage({ data }) {
   return (
@@ -123,15 +124,7 @@ export default function IndexPage({ data }) {
               <br />
               <br />
             </p>
-            <blockquote
-              className={cx(
-                "pl-4",
-                "font-serif",
-                "text-justify",
-                "border-l-4",
-                "border-gray-900",
-              )}
-            >
+            <Quote>
               &quot;Everyone must leave something behind when he dies,&quot; my
               grandfather said. &quot;A child or a book or a painting or a house
               or a wall built or a pair of shoes made. Or a garden planted.
@@ -151,7 +144,7 @@ export default function IndexPage({ data }) {
               <span className={cx("font-semibold")}>
                 Being the lawn cutter is easy... no?
               </span>
-            </blockquote>
+            </Quote>
             <p className={cx("text-right")}> -- Anonymous</p>
             <div
               className={cx("text-center", "my-4", "leading-loose", "text-sm")}
